@@ -5,9 +5,7 @@ function getSpeciesByIds(...ids) {
   return ids.map((id) => species.find((especie) => especie.id === id));
 }
 
-
 function getAnimalsOlderThan(animal, age) {
-  
 }
 
 function getEmployeeByName(employeeName) {
