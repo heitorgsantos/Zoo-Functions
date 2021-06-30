@@ -6,6 +6,7 @@ function getSpeciesByIds(...ids) {
 }
 
 function getAnimalsOlderThan(animal, age) {
+
 }
 
 function getEmployeeByName(employeeName) {
