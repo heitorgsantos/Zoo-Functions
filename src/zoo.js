@@ -6,7 +6,11 @@ function getSpeciesByIds(...ids) {
 }
 
 function getAnimalsOlderThan(animal, age) {
-
+  // foi usado o 'find' para encontrar a primeira espécie e verificar se o paramentro da função principal é igual parâmetro do (find).
+  const especies = species.find((specie) => specie.name === animal);
+  // criado uma variável (idade) para armazenar os paramentros encontrados na variável (espécies). 'usado especies.residents.every' para comparar se TOOOODAS as idades das espécies são MAIORES ou IGUAIS ao paramentro passado.
+  const idades = especies.residents.every((resident) => resident.age >= age);
+  return idades;
 }
 
 function getEmployeeByName(employeeName) {
@@ -25,7 +29,7 @@ function addEmployee(id, firstName, lastName, managers, responsibleFor) {
   // seu código aqui
 }
 
-function countAnimals(ispecies) {
+function countAnimals(parametSpecies) {
   // seu código aqui
 }
 
