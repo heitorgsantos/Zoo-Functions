@@ -246,7 +246,7 @@ module.exports = {
       firstName: 'Nigel',
       lastName: 'Nelson',
       managers: [burlId, olaId],
-      responsibleFor: [lionId, tigersId], 
+      responsibleFor: [lionId, tigersId],
     },
     {
       id: burlId,
