@@ -45,9 +45,20 @@ function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []
   return employees.push({ id, firstName, lastName, managers, responsibleFor });
 }
 
+// const calculatorAnimal = (calculator) => species
+//   .reduce((acc, { name, residents }) => (calculator === name ? residents.length : acc), 0);
+
 function countAnimals(parametSpecies) {
-  // seu código aqui
+  const especiesEquantidades = species.reduce((acc, { name, residents }) => {
+    acc[name] = residents.length;
+    return acc;
+  }, {});
+  if (!parametSpecies) {
+    return especiesEquantidades;
+  }
+  return especiesEquantidades[parametSpecies];
 }
+console.log(countAnimals());
 
 function calculateEntry(entrants) {
   // seu código aqui
