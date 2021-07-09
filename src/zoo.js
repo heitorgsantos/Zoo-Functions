@@ -80,7 +80,6 @@ function getSchedule(dayName) {
     return { [dayName]: week[dayName] };
   }
   return week;
- 
 }
 
 function getOldestFromFirstSpecies(id) {
