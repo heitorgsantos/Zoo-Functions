@@ -83,11 +83,17 @@ function getSchedule(dayName) {
 }
 
 function getOldestFromFirstSpecies(id) {
-  // seu código aqui
+  const foundEmployee = employees.find((employee) => employee.id === id);
+  const specieId = foundEmployee.responsibleFor[0];
+  const foundSpecies = species.find((specie) => specie.id === specieId);
+  const arrayResidents = foundSpecies.residents.map((resident) => resident);
+  const arrayOrder = arrayResidents.sort((resident1, resident2) =>
+    resident2.age - resident1.age)[0];
+  return [arrayOrder.name, arrayOrder.sex, arrayOrder.age];
 }
 
 function increasePrices(percentage) {
-  // seu código aqui
+//
 }
 
 function getEmployeeCoverage(idOrName) {
