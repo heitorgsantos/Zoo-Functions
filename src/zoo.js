@@ -92,7 +92,8 @@ function getOldestFromFirstSpecies(id) {
   return [arrayOrder.name, arrayOrder.sex, arrayOrder.age];
 }
 
-function increasePrices(percentage) { const arrayOfPrices = [];
+function increasePrices(percentage) {
+  const arrayOfPrices = [];
   const arrayPrices = Object.values(data.prices);
   arrayPrices.forEach((element) => arrayOfPrices.push(element + element * (percentage / 100)));
   const [adult, senior, child] = arrayOfPrices;
