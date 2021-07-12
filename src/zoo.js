@@ -92,8 +92,13 @@ function getOldestFromFirstSpecies(id) {
   return [arrayOrder.name, arrayOrder.sex, arrayOrder.age];
 }
 
-function increasePrices(percentage) {
-//
+function increasePrices(percentage) { const arrayOfPrices = [];
+  const arrayPrices = Object.values(data.prices);
+  arrayPrices.forEach((element) => arrayOfPrices.push(element + element * (percentage / 100)));
+  const [adult, senior, child] = arrayOfPrices;
+  prices.Adult = Math.round(adult * 100) / 100;
+  prices.Senior = Math.round(senior * 100) / 100;
+  prices.Child = Math.round(child * 100) / 100;
 }
 
 function getEmployeeCoverage(idOrName) {
